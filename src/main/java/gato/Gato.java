@@ -32,8 +32,8 @@ public class Gato {
     private Gato(String jugador1, String jugador2) {
         mapJugadores.put(true, jugador1);
         mapJugadores.put(false, jugador2);
-        mapIconos.put(true, "Ruta a O");
-        mapIconos.put(false, "Ruta a X");
+        mapIconos.put(true, "O");
+        mapIconos.put(false, "X");
     }
 
     /**
@@ -71,7 +71,7 @@ public class Gato {
      */
     public static String tirar(int i, int j) {
         if (!disponible(i, j)) {
-            return "El espacio ya fue usado por " + mapJugadores.get(!turno);
+            return "El espacio ya fue usado";
         }
         tablero[i][j] = mapIconos.get(turno);
 

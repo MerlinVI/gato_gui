@@ -5,6 +5,9 @@
  */
 package gato;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 public class GatoInterfaz extends javax.swing.JFrame {
 
     /**
@@ -25,251 +28,264 @@ public class GatoInterfaz extends javax.swing.JFrame {
 
         gato = Gato.getGato("Jugador 1", "Jugador 2");
 
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         mensaje = new javax.swing.JLabel();
-
-        ceroCero = new javax.swing.JButton();
-        ceroUno = new javax.swing.JButton();
-        ceroDos = new javax.swing.JButton();
-
-        unoCero = new javax.swing.JButton();
-        unoUno = new javax.swing.JButton();
-        unoDos = new javax.swing.JButton();
-
-        dosCero = new javax.swing.JButton();
-        dosUno = new javax.swing.JButton();
-        dosDos = new javax.swing.JButton();
-
-        ceroCero.setText("0 0");
-        ceroUno.setText("0 1");
-        ceroDos.setText("0 2");
-
-        unoCero.setText("1 0");
-        unoUno.setText("1 1");
-        unoDos.setText("1 2");
-
-        dosCero.setText("2 0");
-        dosUno.setText("2 1");
-        dosDos.setText("2 2");
+        jButton10 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        //Fila superior
-        ceroCero.addActionListener(new java.awt.event.ActionListener() {
+        //jButton2.setText("0 0");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ceroCeroActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
 
-        ceroUno.addActionListener(new java.awt.event.ActionListener() {
+        //jButton3.setText("0 1");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ceroUnoActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
 
-        ceroDos.addActionListener(new java.awt.event.ActionListener() {
+        //jButton1.setText("0 2");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ceroDosActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
-        //Fila media
-        unoCero.addActionListener(new java.awt.event.ActionListener() {
+        //jButton5.setText("1 0");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                unoCeroActionPerformed(evt);
+                jButton5ActionPerformed(evt);
             }
         });
 
-        unoUno.addActionListener(new java.awt.event.ActionListener() {
+        //jButton6.setText("1 1");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                unoUnoActionPerformed(evt);
+                jButton6ActionPerformed(evt);
             }
         });
 
-        unoDos.addActionListener(new java.awt.event.ActionListener() {
+        //jButton4.setText("1 2");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                unoDosActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
 
-        //Fila inferior
-        dosCero.addActionListener(new java.awt.event.ActionListener() {
+        //jButton7.setText("2 2");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dosCeroActionPerformed(evt);
+                jButton7ActionPerformed(evt);
             }
         });
 
-        dosUno.addActionListener(new java.awt.event.ActionListener() {
+        //jButton8.setText("2 0");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dosUnoActionPerformed(evt);
+                jButton8ActionPerformed(evt);
             }
         });
 
-        dosDos.addActionListener(new java.awt.event.ActionListener() {
+        //jButton9.setText("2 1");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dosDosActionPerformed(evt);
+                jButton9ActionPerformed(evt);
             }
         });
+
+        jLabel1.setFont(new java.awt.Font("Rubik", 1, 24)); // NOI18N
+        jLabel1.setText("Juego Gato");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        mensaje.setText("¡A jugar!");
+
+        System.out.println("Agregando el icono");
+        Icon icon = new ImageIcon("/restart.png");
+        jButton10.setIcon(icon);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(ceroCero, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(ceroUno, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(ceroDos, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        
-//                                        .addGroup(layout.createSequentialGroup()
-//                                                .addContainerGap()
-//                                                .addComponent(ceroCero, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-//                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-//                                                .addComponent(ceroUno, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-//                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-//                                                .addComponent(ceroDos, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-//                                        .addGroup(layout.createSequentialGroup()
-//                                                .addGap(18, 18, 18)
-//                                                .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))
-//                                        .addGroup(layout.createSequentialGroup()
-//                                                .addContainerGap()
-//                                                .addComponent(unoCero, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-//                                        .addGroup(layout.createSequentialGroup()
-//                                                .addContainerGap()
-//                                                .addComponent(unoUno, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-//                                        .addGroup(layout.createSequentialGroup()
-//                                                .addContainerGap()
-//                                                .addComponent(unoDos, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-//                                        .addGroup(layout.createSequentialGroup()
-//                                                .addGap(18, 18, 18))
-//                                        .addGroup(layout.createSequentialGroup()
-//                                                .addContainerGap()
-//                                                .addComponent(dosCero, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-//                                        .addGroup(layout.createSequentialGroup()
-//                                                .addContainerGap()
-//                                                .addComponent(dosUno, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-//                                        .addGroup(layout.createSequentialGroup()
-//                                                .addContainerGap()
-//                                                .addComponent(dosDos, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-//                                )
-                                .addContainerGap(80, Short.MAX_VALUE)
-                        )
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(33, 33, 33)
+                                                .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(37, 37, 37)
+                                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(16, 16, 16)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addContainerGap(17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(ceroCero, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(ceroUno, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(ceroDos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(unoCero, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(unoUno, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(unoDos, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(dosCero, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(dosUno, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(dosDos, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        )
-                                        .addComponent(unoCero, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ceroCero, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-                                .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(6, 6, 6)
+                                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ceroCeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoUnoActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoUnoActionPerformed
         // TODO add your handling code here:i
         String resultado = gato.tirar(0, 0);
-        if (resultado.equals("Espacio ocupado")) {
+        System.out.println(resultado);
+        if (resultado.startsWith("El espacio")) {
             mensaje.setText(resultado);
         } else {
-            ceroCero.setText(resultado);
+            jButton2.setText(resultado);
         }
+        String resultadoJugada = gato.validarJugada();
+        mensaje.setText(resultadoJugada);
     }
 
-    private void ceroUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoDosActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoDosActionPerformed
         // TODO add your handling code here:
         String resultado = gato.tirar(0, 1);
-        if (resultado.equals("Espacio ocupado")) {
+        System.out.println(resultado);
+        if (resultado.startsWith("El espacio")) {
             mensaje.setText(resultado);
         } else {
-            ceroUno.setText(resultado);
+            jButton3.setText(resultado);
         }
     }//GEN-LAST:event_unoDosActionPerformed
 
-    private void ceroDosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoTresActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoTresActionPerformed
         // TODO add your handling code here:
         String resultado = gato.tirar(0, 2);
-        if (resultado.equals("Espacio ocupado")) {
+        System.out.println(resultado);
+        if (resultado.startsWith("El espacio")) {
             mensaje.setText(resultado);
         } else {
-            ceroDos.setText(resultado);
+            jButton1.setText(resultado);
         }
 
     }//GEN-LAST:event_unoTresActionPerformed
 
-    private void unoCeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoUnoActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoUnoActionPerformed
         // TODO add your handling code here:i
-        String resultado = gato.tirar(0, 0);
-        if (resultado.equals("Espacio ocupado")) {
+        String resultado = gato.tirar(1, 0);
+        System.out.println(resultado);
+        if (resultado.startsWith("El espacio")) {
             mensaje.setText(resultado);
         } else {
-            ceroCero.setText(resultado);
+            jButton5.setText(resultado);
         }
     }
 
-    private void unoUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoDosActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoDosActionPerformed
         // TODO add your handling code here:
-        String resultado = gato.tirar(0, 1);
-        if (resultado.equals("Espacio ocupado")) {
+        String resultado = gato.tirar(1, 1);
+        System.out.println(resultado);
+        if (resultado.startsWith("El espacio")) {
             mensaje.setText(resultado);
         } else {
-            ceroUno.setText(resultado);
+            jButton6.setText(resultado);
         }
     }//GEN-LAST:event_unoDosActionPerformed
 
-    private void unoDosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoTresActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoTresActionPerformed
         // TODO add your handling code here:
-        String resultado = gato.tirar(0, 2);
-        if (resultado.equals("Espacio ocupado")) {
+        String resultado = gato.tirar(1, 2);
+        System.out.println(resultado);
+        System.out.println(resultado);
+        if (resultado.startsWith("El espacio")) {
             mensaje.setText(resultado);
         } else {
-            ceroDos.setText(resultado);
+            jButton4.setText(resultado);
         }
 
     }//GEN-LAST:event_unoTresActionPerformed
 
-    private void dosCeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoUnoActionPerformed
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoUnoActionPerformed
         // TODO add your handling code here:i
-        String resultado = gato.tirar(0, 0);
-        if (resultado.equals("Espacio ocupado")) {
+        String resultado = gato.tirar(2, 0);
+        System.out.println(resultado);
+        if (resultado.startsWith("El espacio")) {
             mensaje.setText(resultado);
         } else {
-            ceroCero.setText(resultado);
+            jButton8.setText(resultado);
         }
     }
 
-    private void dosUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoDosActionPerformed
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoDosActionPerformed
         // TODO add your handling code here:
-        String resultado = gato.tirar(0, 1);
-        if (resultado.equals("Espacio ocupado")) {
+        String resultado = gato.tirar(2, 1);
+        System.out.println(resultado);
+        if (resultado.startsWith("El espacio")) {
             mensaje.setText(resultado);
         } else {
-            ceroUno.setText(resultado);
+            jButton9.setText(resultado);
         }
     }//GEN-LAST:event_unoDosActionPerformed
 
-    private void dosDosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoTresActionPerformed
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoTresActionPerformed
         // TODO add your handling code here:
-        String resultado = gato.tirar(0, 2);
-        if (resultado.equals("Espacio ocupado")) {
+        String resultado = gato.tirar(2, 2);
+        System.out.println(resultado);
+        if (resultado.startsWith("El espacio")) {
             mensaje.setText(resultado);
         } else {
-            ceroDos.setText(resultado);
+            jButton7.setText(resultado);
         }
 
     }//GEN-LAST:event_unoTresActionPerformed
@@ -309,24 +325,20 @@ public class GatoInterfaz extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private Gato gato;
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel mensaje;
-
-    //Fila Superior
-    private javax.swing.JButton ceroUno;
-    private javax.swing.JButton ceroDos;
-    private javax.swing.JButton ceroCero;
-
-    //Fila Media
-    private javax.swing.JButton unoCero;
-    private javax.swing.JButton unoUno;
-    private javax.swing.JButton unoDos;
-
-    //Fila Inferior
-    private javax.swing.JButton dosCero;
-    private javax.swing.JButton dosUno;
-    private javax.swing.JButton dosDos;
-
     // End of variables declaration//GEN-END:variables
 }
