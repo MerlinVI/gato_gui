@@ -5,6 +5,8 @@
  */
 package gato;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author AlexisAldanaMerlín
@@ -15,7 +17,7 @@ public class GatoGui extends javax.swing.JFrame {
      * Creates new form GatoGui
      */
     public GatoGui() {
-        gato = Gato.getGato("Jugador 1", "Jugador 2");
+        gato = Gato.getGato("Jugador 2", "Jugador 1");
         initComponents();
     }
 
@@ -44,54 +46,63 @@ public class GatoGui extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
 
+        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
 
+        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
 
+        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
 
+        jButton8.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
 
+        jButton9.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -146,14 +157,14 @@ public class GatoGui extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(38, 38, 38))
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(3, 3, 3))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 6, Short.MAX_VALUE)))))
-                .addContainerGap(7, Short.MAX_VALUE))
+                                .addGap(0, 32, Short.MAX_VALUE)))))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,7 +197,7 @@ public class GatoGui extends javax.swing.JFrame {
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -203,9 +214,12 @@ public class GatoGui extends javax.swing.JFrame {
         }
         String resultadoJugada = gato.validarJugada();
         jLabel2.setText(resultadoJugada);
+        if (resultadoJugada.startsWith("El ganador") || resultadoJugada.equals("¡¡Empate!!")) {
+            desactivarTablero();
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    
+
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:i
         String resultado = gato.tirar(1, 0);
@@ -217,6 +231,9 @@ public class GatoGui extends javax.swing.JFrame {
         }
         String resultadoJugada = gato.validarJugada();
         jLabel2.setText(resultadoJugada);
+        if (resultadoJugada.startsWith("El ganador") || resultadoJugada.equals("¡¡Empate!!")) {
+            desactivarTablero();
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -230,6 +247,9 @@ public class GatoGui extends javax.swing.JFrame {
         }
         String resultadoJugada = gato.validarJugada();
         jLabel2.setText(resultadoJugada);
+        if (resultadoJugada.startsWith("El ganador") || resultadoJugada.equals("¡¡Empate!!")) {
+            desactivarTablero();
+        }
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -243,6 +263,9 @@ public class GatoGui extends javax.swing.JFrame {
         }
         String resultadoJugada = gato.validarJugada();
         jLabel2.setText(resultadoJugada);
+        if (resultadoJugada.startsWith("El ganador") || resultadoJugada.equals("¡¡Empate!!")) {
+            desactivarTablero();
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -256,6 +279,9 @@ public class GatoGui extends javax.swing.JFrame {
         }
         String resultadoJugada = gato.validarJugada();
         jLabel2.setText(resultadoJugada);
+        if (resultadoJugada.startsWith("El ganador") || resultadoJugada.equals("¡¡Empate!!")) {
+            desactivarTablero();
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -269,6 +295,9 @@ public class GatoGui extends javax.swing.JFrame {
         }
         String resultadoJugada = gato.validarJugada();
         jLabel2.setText(resultadoJugada);
+        if (resultadoJugada.startsWith("El ganador") || resultadoJugada.equals("¡¡Empate!!")) {
+            desactivarTablero();
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -282,6 +311,9 @@ public class GatoGui extends javax.swing.JFrame {
         }
         String resultadoJugada = gato.validarJugada();
         jLabel2.setText(resultadoJugada);
+        if (resultadoJugada.startsWith("El ganador") || resultadoJugada.equals("¡¡Empate!!")) {
+            desactivarTablero();
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -295,6 +327,9 @@ public class GatoGui extends javax.swing.JFrame {
         }
         String resultadoJugada = gato.validarJugada();
         jLabel2.setText(resultadoJugada);
+        if (resultadoJugada.startsWith("El ganador") || resultadoJugada.equals("¡¡Empate!!")) {
+            desactivarTablero();
+        }
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -308,11 +343,27 @@ public class GatoGui extends javax.swing.JFrame {
         }
         String resultadoJugada = gato.validarJugada();
         jLabel2.setText(resultadoJugada);
+        if (resultadoJugada.startsWith("El ganador") || resultadoJugada.equals("¡¡Empate!!")) {
+            desactivarTablero();
+        }
     }//GEN-LAST:event_jButton7ActionPerformed
-    
+
     //Reiniciar el tablero y los datos del juego
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+        gato.restartGame();
+        jButton1.setText("");
+        jButton2.setText("");
+        jButton3.setText("");
+        jButton4.setText("");
+        jButton5.setText("");
+        jButton6.setText("");
+        jButton7.setText("");
+        jButton8.setText("");
+        jButton9.setText("");
+        jLabel2.setText("Turno de jugador 1");
+        jLabel3.setText("¡A jugar!");
+        activarTablero();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     /**
@@ -348,6 +399,30 @@ public class GatoGui extends javax.swing.JFrame {
                 new GatoGui().setVisible(true);
             }
         });
+    }
+
+    private void desactivarTablero() {
+        jButton1.setEnabled(false);
+        jButton2.setEnabled(false);
+        jButton3.setEnabled(false);
+        jButton4.setEnabled(false);
+        jButton5.setEnabled(false);
+        jButton6.setEnabled(false);
+        jButton7.setEnabled(false);
+        jButton8.setEnabled(false);
+        jButton9.setEnabled(false);
+    }
+
+    private void activarTablero() {
+        jButton1.setEnabled(true);
+        jButton2.setEnabled(true);
+        jButton3.setEnabled(true);
+        jButton4.setEnabled(true);
+        jButton5.setEnabled(true);
+        jButton6.setEnabled(true);
+        jButton7.setEnabled(true);
+        jButton8.setEnabled(true);
+        jButton9.setEnabled(true);
     }
 
     private Gato gato;
