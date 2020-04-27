@@ -71,7 +71,7 @@ public class Gato {
      */
     public static String tirar(int i, int j) {
         if (!disponible(i, j)) {
-            return "El espacio ya fue usado";
+            return "Espacio ocupado";
         }
         tablero[i][j] = mapIconos.get(turno);
 
